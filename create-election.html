@@ -19,18 +19,36 @@
 
 <form>
 
-<input type="text" placeholder="Election Name" required>
+<input
+id="electionName"
+type="text"
+placeholder="Election Name">
 
-<select required>
+<select id="electionType">
+
 <option value="">Election Type</option>
+
 <option>Student Union Election</option>
+
 <option>Faculty Election</option>
+
 <option>Department Election</option>
-<option>FUSU/FIESU Election</option>
-<option>NANS Election</option>
+
 <option>Association Election</option>
-<option>Other</option>
+
+<option>FUSU/FIESU Election</option>
+
+<option>NANS Election</option>
+
 </select>
+
+<button
+type="button"
+onclick="createElection()">
+
+Create Election
+
+</button>
 
 <label>Start Date</label>
 <input type="date" required>
