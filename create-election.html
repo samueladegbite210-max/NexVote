@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create Election</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<div class="logo">🗳️ NexVote</div>
+</header>
+
+<section class="register">
+
+<h1>Create Election</h1>
+
+<form>
+
+<input type="text" placeholder="Election Name" required>
+
+<select required>
+<option value="">Election Type</option>
+<option>Student Union Election</option>
+<option>Faculty Election</option>
+<option>Department Election</option>
+<option>FUSU/FIESU Election</option>
+<option>NANS Election</option>
+<option>Association Election</option>
+<option>Other</option>
+</select>
+
+<label>Start Date</label>
+<input type="date" required>
+
+<label>End Date</label>
+<input type="date" required>
+
+<label>Election Description</label>
+<textarea placeholder="Describe this election..."></textarea>
+
+<button type="button"
+onclick="location.href='positions.html'">
+Create Election
+</button>
+
+</form>
+</section>
+
+</body>
+</html
