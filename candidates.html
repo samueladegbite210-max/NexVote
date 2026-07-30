@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Candidates - NexVote</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<div class="logo">🗳️ NexVote</div>
+</header>
+
+<section class="register">
+
+<h1>Candidate Registration</h1>
+
+<p>Add candidates for this election.</p>
+
+<form>
+
+<input type="text" placeholder="Full Name" required>
+
+<select required>
+<option>Select Position</option>
+<option>President</option>
+<option>Vice President</option>
+<option>General Secretary</option>
+<option>Treasurer</option>
+</select>
+
+<input type="text" placeholder="Student ID / Membership ID">
+
+<input type="file" accept="image/*">
+
+<textarea placeholder="Candidate Manifesto"></textarea>
+
+<button type="button">
+Add Candidate
+</button>
+
+</form>
+
+<br>
+
+<div class="card">
+
+<h2>Registered Candidates</h2>
+
+<ul>
+<li>👤 John Doe - President</li>
+<li>👤 Jane Smith - Vice President</li>
+</ul>
+
+</div>
+
+<br>
+
+<button onclick="location.href='voters.html'">
+Continue to Voters →
+</button>
+
+</section>
+
+</body>
+</html>
