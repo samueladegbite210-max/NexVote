@@ -1,14 +1,158 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>NexVote</title>
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - NexVote</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: #0D0D0D;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
 
+    .login-box {
+      background: #1A1A1A;
+      width: 100%;
+      max-width: 420px;
+      border-radius: 16px;
+      padding: 40px 32px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .logo h1 {
+      color: #D4AF37;
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .logo p {
+      color: #F5D77A;
+      font-size: 13px;
+      margin-top: 4px;
+    }
+
+    .login-box h2 {
+      color: white;
+      font-size: 22px;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+
+    .login-box .subtitle {
+      color: #9ca3af;
+      font-size: 14px;
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .form-group label {
+      color: #e5e7eb;
+    }
+
+    .form-control {
+      background: #0D0D0D;
+      border: 1.5px solid #333;
+      color: white;
+    }
+
+    .form-control:focus {
+      border-color: #D4AF37;
+    }
+
+    .form-control::placeholder {
+      color: #6b7280;
+    }
+
+    .forgot {
+      display: block;
+      text-align: right;
+      margin-top: -8px;
+      margin-bottom: 20px;
+      font-size: 13px;
+      color: #D4AF37;
+      text-decoration: none;
+    }
+
+    .forgot:hover {
+      text-decoration: underline;
+    }
+
+    .signup-text {
+      text-align: center;
+      margin-top: 24px;
+      font-size: 14px;
+      color: #9ca3af;
+    }
+
+    .signup-text a {
+      color: #D4AF37;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .signup-text a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
 <body>
 
-<h1>Coming Soon</h1>
+  <div class="login-box">
+    <!-- Logo -->
+    <div class="logo">
+      <h1>NEXVOTE</h1>
+      <p>Secure Elections. Trusted Results.</p>
+    </div>
 
-<p>This page is under development.</p>
+    <h2>Log In</h2>
+    <p class="subtitle">Enter your email or Student ID</p>
 
+    <form id="loginForm">
+      <div class="form-group">
+        <label for="email">Email or Student ID</label>
+        <input 
+          type="text" 
+          id="email" 
+          class="form-control" 
+          placeholder="Enter your email or ID"
+          required
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input 
+          type="password" 
+          id="password" 
+          class="form-control" 
+          placeholder="Enter your password"
+          required
+        >
+      </div>
+
+      <a href="#" class="forgot">Forgot Password?</a>
+
+      <button type="submit" class="btn btn-primary btn-full">
+        Log In
+      </button>
+    </form>
+
+    <p class="signup-text">
+      Don’t have an account? <a href="register.html">Sign up</a>
+    </p>
+  </div>
+
+  <script src="js/auth.js"></script>
 </body>
 </html>
