@@ -1,62 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Register Organization - NexVote</title>
-<link rel="stylesheet" href="style.css">
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - NexVote</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: #0D0D0D;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
 
+    .register-box {
+      background: #1A1A1A;
+      width: 100%;
+      max-width: 440px;
+      border-radius: 16px;
+      padding: 40px 32px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .logo h1 {
+      color: #D4AF37;
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .logo p {
+      color: #F5D77A;
+      font-size: 13px;
+      margin-top: 4px;
+    }
+
+    .register-box h2 {
+      color: white;
+      font-size: 22px;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+
+    .register-box .subtitle {
+      color: #9ca3af;
+      font-size: 14px;
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .form-group label {
+      color: #e5e7eb;
+    }
+
+    .form-control {
+      background: #0D0D0D;
+      border: 1.5px solid #333;
+      color: white;
+    }
+
+    .form-control:focus {
+      border-color: #D4AF37;
+    }
+
+    .form-control::placeholder {
+      color: #6b7280;
+    }
+
+    .login-text {
+      text-align: center;
+      margin-top: 24px;
+      font-size: 14px;
+      color: #9ca3af;
+    }
+
+    .login-text a {
+      color: #D4AF37;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .login-text a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
 <body>
 
-<header>
-    <div class="logo">🗳️ NexVote</div>
-</header>
+  <div class="register-box">
+    <!-- Logo -->
+    <div class="logo">
+      <h1>NEXVOTE</h1>
+      <p>Secure Elections. Trusted Results.</p>
+    </div>
 
-<section class="register">
+    <h2>Create Account</h2>
+    <p class="subtitle">Join NexVote and start voting securely</p>
 
-<h1>Create Your Organization</h1>
+    <form id="registerForm">
+      <div class="form-group">
+        <label for="fullName">Full Name</label>
+        <input 
+          type="text" 
+          id="fullName" 
+          class="form-control" 
+          placeholder="Enter your full name"
+          required
+        >
+      </div>
 
-<p>Register your institution or organization to start conducting secure elections.</p>
+      <div class="form-group">
+        <label for="email">Email or Student ID</label>
+        <input 
+          type="text" 
+          id="email" 
+          class="form-control" 
+          placeholder="Enter your email or ID"
+          required
+        >
+      </div>
 
-<form>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input 
+          type="password" 
+          id="password" 
+          class="form-control" 
+          placeholder="Create a password"
+          required
+        >
+      </div>
 
-<input type="text" placeholder="Organization Name">
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <input 
+          type="password" 
+          id="confirmPassword" 
+          class="form-control" 
+          placeholder="Confirm your password"
+          required
+        >
+      </div>
 
-<select>
-<option>Select Organization Type</option>
-<option>University</option>
-<option>College</option>
-<option>Student Union (SUG)</option>
-<option>FUSU / FIESU</option>
-<option>NANS</option>
-<option>Association</option>
-<option>NGO</option>
-<option>Other</option>
-</select>
+      <button type="submit" class="btn btn-primary btn-full">
+        Create Account
+      </button>
+    </form>
 
-<input type="text" placeholder="Country">
+    <p class="login-text">
+      Already have an account? <a href="login.html">Log In</a>
+    </p>
+  </div>
 
-<input type="text" placeholder="Institution (Optional)">
-
-<input type="text" placeholder="Contact Person">
-
-<input type="email" placeholder="Email Address">
-
-<input type="tel" placeholder="Phone Number">
-
-<input type="password" placeholder="Create Password">
-
-<input type="password" placeholder="Confirm Password">
-
-
-<button onclick="location.href='dashboard.html'">
-Create Organization
-</button>
-
-</form>
-
-</section>
-
+  <script src="js/auth.js"></script>
 </body>
 </html>
