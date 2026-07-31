@@ -1,68 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Candidates - NexVote</title>
-<link rel="stylesheet" href="style.css">
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Candidates - NexVote</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: #f3f4f6;
+      margin: 0;
+      display: flex;
+      min-height: 100vh;
+    }
 
+    /* Sidebar */
+    .sidebar {
+      width: 260px;
+      background: #0D0D0D;
+      color: white;
+      padding: 24px 16px;
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      height: 100vh;
+    }
+
+    .sidebar .logo {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .sidebar .logo h2 {
+      color: #D4AF37;
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .sidebar .logo p {
+      color: #F5D77A;
+      font-size: 11px;
+    }
+
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 16px;
+      color: #d1d5db;
+      text-decoration: none;
+      border-radius: 8px;
+      margin-bottom: 6px;
+      font-size: 15px;
+      transition: all 0.2s;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      background: #1A1A1A;
+      color: #D4AF37;
+    }
+
+    /* Main Content */
+    .main {
+      margin-left: 260px;
+      flex: 1;
+      padding: 30px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .header h1 {
+      font-size: 26px;
+      font-weight: 700;
+    }
+
+    /* Candidate Cards */
+    .candidates-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .candidate-card {
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .candidate-card:hover {
+      transform: translateY(-3px);
+    }
+
+    .avatar {
+      width: 80px;
+      height: 80px;
+      background: #D4AF37;
+      color: #0D0D0D;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      font-weight: 700;
+      margin: 0 auto 16px;
+    }
+
+    .candidate-card h3 {
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .candidate-card .position {
+      font-size: 13px;
+      color: #D4AF37;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    .candidate-card .party {
+      font-size: 13px;
+      color: #6b7280;
+      margin-bottom: 16px;
+    }
+
+    .candidate-card .actions {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .candidate-card .actions .btn {
+      padding: 8px 16px;
+      font-size: 13px;
+    }
+
+    @media (max-width: 900px) {
+      .sidebar {
+        display: none;
+      }
+      .main {
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
 <body>
 
-<header>
-<div class="logo">🗳️ NexVote</div>
-</header>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="logo">
+      <h2>NEXVOTE</h2>
+      <p>Secure Elections. Trusted Results.</p>
+    </div>
 
-<section class="register">
+    <a href="dashboard.html" class="nav-link">Dashboard</a>
+    <a href="elections.html" class="nav-link">Elections</a>
+    <a href="candidates.html" class="nav-link active">Candidates</a>
+    <a href="voters.html" class="nav-link">Voters</a>
+    <a href="results.html" class="nav-link">Results</a>
+    <a href="settings.html" class="nav-link">Settings</a>
+    <a href="login.html" class="nav-link" style="margin-top: auto; color: #E53E3E;">Logout</a>
+  </div>
 
-<h1>Candidate Registration</h1>
+  <!-- Main Content -->
+  <div class="main">
+    <div class="header">
+      <h1>Candidates</h1>
+      <a href="#" class="btn btn-primary">+ Add Candidate</a>
+    </div>
 
-<p>Add candidates for this election.</p>
+    <div class="candidates-grid">
 
-<form>
+      <!-- Candidate 1 -->
+      <div class="candidate-card">
+        <div class="avatar">JA</div>
+        <h3>John Adebayo</h3>
+        <div class="position">President</div>
+        <div class="party">Unity Progress Party</div>
+        <div class="actions">
+          <a href="#" class="btn btn-outline">Edit</a>
+          <a href="#" class="btn btn-danger">Remove</a>
+        </div>
+      </div>
 
-<input type="text" placeholder="Full Name" required>
+      <!-- Candidate 2 -->
+      <div class="candidate-card">
+        <div class="avatar">MO</div>
+        <h3>Mary Okafor</h3>
+        <div class="position">Vice President</div>
+        <div class="party">Leadership Integrity</div>
+        <div class="actions">
+          <a href="#" class="btn btn-outline">Edit</a>
+          <a href="#" class="btn btn-danger">Remove</a>
+        </div>
+      </div>
 
-<select required>
-<option>Select Position</option>
-<option>President</option>
-<option>Vice President</option>
-<option>General Secretary</option>
-<option>Treasurer</option>
-</select>
+      <!-- Candidate 3 -->
+      <div class="candidate-card">
+        <div class="avatar">DJ</div>
+        <h3>David Johnson</h3>
+        <div class="position">Secretary</div>
+        <div class="party">Students First</div>
+        <div class="actions">
+          <a href="#" class="btn btn-outline">Edit</a>
+          <a href="#" class="btn btn-danger">Remove</a>
+        </div>
+      </div>
 
-<input type="text" placeholder="Student ID / Membership ID">
+      <!-- Candidate 4 -->
+      <div class="candidate-card">
+        <div class="avatar">SA</div>
+        <h3>Sarah Ahmed</h3>
+        <div class="position">Treasurer</div>
+        <div class="party">Progress Alliance</div>
+        <div class="actions">
+          <a href="#" class="btn btn-outline">Edit</a>
+          <a href="#" class="btn btn-danger">Remove</a>
+        </div>
+      </div>
 
-<input type="file" accept="image/*">
+    </div>
+  </div>
 
-<textarea placeholder="Candidate Manifesto"></textarea>
-
-<button type="button">
-Add Candidate
-</button>
-
-</form>
-
-<br>
-
-<div class="card">
-
-<h2>Registered Candidates</h2>
-
-<ul>
-<li>👤 John Doe - President</li>
-<li>👤 Jane Smith - Vice President</li>
-</ul>
-
-</div>
-
-<br>
-
-<button onclick="location.href='voters.html'">
-Continue to Voters →
-</button>
-
-</section>
-
+  <script src="js/candidates.js"></script>
 </body>
 </html>
